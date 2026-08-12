@@ -6,7 +6,7 @@ options:
 packages:
   HaishinKit:
     url: https://github.com/shogo4405/HaishinKit.swift.git
-    from: 1.0.0
+    branch: main
 targets:
   iOSScreenStream:
     type: application
