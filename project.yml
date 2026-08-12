@@ -18,6 +18,7 @@ targets:
       - package: HaishinKit
       - package: HaishinKit
         product: RTMPHaishinKit
+      - sdk: ReplayKit.framework
       - target: BroadcastExtension
         embed: true
     settings:
@@ -36,6 +37,7 @@ targets:
       - package: HaishinKit
       - package: HaishinKit
         product: RTMPHaishinKit
+      - sdk: ReplayKit.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yiyeshi0.iosstream.broadcast
