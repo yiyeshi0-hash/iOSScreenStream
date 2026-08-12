@@ -1,0 +1,42 @@
+name: iOSScreenStream
+options:
+  bundleIdPrefix: com.yiyeshi0
+  deploymentTarget:
+    iOS: "15.0"
+packages:
+  HaishinKit:
+    url: https://github.com/shogo4405/HaishinKit.swift.git
+    from: 1.0.0
+targets:
+  iOSScreenStream:
+    type: application
+    platform: iOS
+    sources:
+      - App
+      - Shared
+    dependencies:
+      - package: HaishinKit
+      - package: RTMPHaishinKit
+      - target: BroadcastExtension
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yiyeshi0.iosstream
+        INFOPLIST_FILE: App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: App/iOSScreenStream.entitlements
+        SWIFT_VERSION: "6.0"
+  BroadcastExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Broadcast
+      - Shared
+    dependencies:
+      - package: HaishinKit
+      - package: RTMPHaishinKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yiyeshi0.iosstream.broadcast
+        INFOPLIST_FILE: Broadcast/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Broadcast/Broadcast.entitlements
+        SWIFT_VERSION: "6.0"
