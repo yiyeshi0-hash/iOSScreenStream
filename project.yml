@@ -16,7 +16,7 @@ targets:
       - Shared
     dependencies:
       - package: HaishinKit
-      - package: RTMPHaishinKit
+      - package: HaishinKit / RTMPHaishinKit
       - target: BroadcastExtension
         embed: true
     settings:
@@ -33,7 +33,7 @@ targets:
       - Shared
     dependencies:
       - package: HaishinKit
-      - package: RTMPHaishinKit
+      - package: HaishinKit / RTMPHaishinKit
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yiyeshi0.iosstream.broadcast
